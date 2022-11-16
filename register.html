@@ -49,10 +49,32 @@
             <label for="pwd" class="form-label">Password:</label>
             <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
         </div>
-        <div class="mb-3">
-            <label for="cpwd" class="form-label">Confirm Password:</label>
-            <input type="password" class="form-control" id="cpwd" placeholder="Confirm password" name="cpswd">
+
+        <div class="row">
+            <div class="mb-3 col-9" id="avatars">
+                <div class="avatar" id="avatar-1" onclick="change_avatar(1)">
+                    <img src="./asset/1.png" width="75">
+                    <span>1</span>
+                </div>
+                <div class="avatar" id="avatar-2" onclick="change_avatar(2)">
+                    <img src="./asset/2.png" width="75">
+                    <span>2</span>
+                </div>
+                <div class="avatar" id="avatar-3" onclick="change_avatar(3)">
+                    <img src="./asset/3.png" width="75">
+                    <span>3</span>
+                </div>
+                <div class="avatar" id="avatar-4" onclick="change_avatar(4)">
+                    <img src="./asset/4.png" width="75">
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="mb-3 col-3">
+                <label for="avatar" class="form-label">Avatar:</label>
+                <input type="number" class="form-control" id="avatar" placeholder="Icon Number or Select" name="avatar">
+            </div>
         </div>
+
         <button type="submit" class="btn btn-success col-12">Register</button>
     </form>
 
@@ -63,6 +85,7 @@
         </div>
     </footer>
 
+    <script src="ScriptRegister.js"></script>
 </body>
 
 </html>
