@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="account_style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,22 +18,78 @@
     <title>Blog | Django</title>
 </head>
 
-<body class="bg-dark text-white">
-    <div>
-        <h1>Comming Soon Complated</h1>
-    </div>
+<body class="text-white" style="background-color: #1f1f1f;">
 
-    <!-- <div class="alert alert-success alert-dismissible fade show col-10 m-auto">
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        <strong>Success!</strong> Test Message !!
-    </div> -->
+    <main style="height: 95vh;">
 
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar-custom">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <img class="bi me-2" src="asset/1.png" width="48">
+                <span class="ms-2">UserName</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="account_panel.html" class="nav-link active" aria-current="page">
+                        <i class="fa-solid fa-gauge me-1"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="myblog.html" class="nav-link text-white">
+                        <i class="fa-solid fa-blog me-1"></i>
+                        MyBlog
+                    </a>
+                </li>
+        </div>
+
+        <div class="main-content">
+            <div class="text-center col-12">
+                <div class="container-fluid p-5 bg-primary text-white text-center">
+                    <h1>Welcom Full Name</h1>
+                    <p>You Writed count Post</p>
+                </div>
+
+
+                <div class="container-fluid" style="padding:100px 20px;">
+                    <h1 class="pt-5">LastPosts</h1>
+                    <table class="table table-dark table-striped">
+                        <tr class="table-dark">
+                            <th scope="col">Title</th>
+                            <th scope="col">Thumbnail</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Time Created</th>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Test1</td>
+                            <td><img src="asset/thump-test.jpg" width="100" class="img-thumbnail bg-dark"></td>
+                            <td><span class="badge bg-primary">You</span></td>
+                            <td>3 Min Ago</td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Test2</td>
+                            <td><img src="asset/thump-test.jpg" width="100" class="img-thumbnail bg-dark"></td>
+                            <td><span class="badge bg-secondary">Ali</span></td>
+                            <td>10 Min Ago</td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Test3</td>
+                            <td><img src="asset/thump-test.jpg" width="100" class="img-thumbnail bg-dark"></td>
+                            <td><span class="badge bg-secondary">Taghi</span></td>
+                            <td class="">11 Min Ago</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <footer>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:
             <a class="text-light" href="http://pooyarezaee.ir/" target="_blank">Pooya RezaeeMoghadam</a>
-          </div>    
+        </div>
     </footer>
 
 </body>

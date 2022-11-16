@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="account_style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <title>Blog | Django</title>
+</head>
+
+<body class="text-white" style="background-color: #1f1f1f;">
+
+    <main style="height: 95vh;">
+
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar-custom">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <img class="bi me-2" src="asset/1.png" width="48">
+                <span class="ms-2">UserName</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="account_panel.html" class="nav-link text-white" aria-current="page">
+                        <i class="fa-solid fa-gauge me-1"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="myblog.html" class="nav-link active">
+                        <i class="fa-solid fa-blog me-1"></i>
+                        MyBlog
+                    </a>
+                </li>
+        </div>
+
+        <div class="main-content">
+
+            <div class="text-center col-12">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#info">Info</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#posts">Posts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div id="info" class="container-fluid" style="padding:100px 20px;">
+                    <h1>Your Info</h1>
+
+                    <form class="col-6 m-auto mt-2 mb-5">
+                        <div class="row mb-3 mt-3">
+                            <div class="col">
+                                <label for="firstname" class="form-label">Your First Name:</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter FirstName"
+                                    name="firstName">
+                            </div>
+                            <div class="col">
+                                <label for="lastname" class="form-label">Your Last Name:</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter LastName"
+                                    name="lastName">
+                            </div>
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label for="email" class="form-label">Your User Name:</label>
+                            <input type="email" class="form-control" id="username" placeholder="Enter UserName"
+                                name="username">
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label for="email" class="form-label">Your Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+
+                        <div class="row">
+                            <div class="mb-3 col-9" id="avatars">
+                                <div class="avatar" id="avatar-1" onclick="change_avatar(1)">
+                                    <img src="./asset/1.png" width="75">
+                                    <span>1</span>
+                                </div>
+                                <div class="avatar" id="avatar-2" onclick="change_avatar(2)">
+                                    <img src="./asset/2.png" width="75">
+                                    <span>2</span>
+                                </div>
+                                <div class="avatar" id="avatar-3" onclick="change_avatar(3)">
+                                    <img src="./asset/3.png" width="75">
+                                    <span>3</span>
+                                </div>
+                                <div class="avatar" id="avatar-4" onclick="change_avatar(4)">
+                                    <img src="./asset/4.png" width="75">
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <div class="mb-3 col-3">
+                                <label for="avatar" class="form-label">Change Avatar</label>
+                                <input type="number" class="form-control" id="avatar"
+                                    placeholder="Icon Number or Select" name="avatar">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success col-12">Change</button>
+                    </form>
+
+                </div>
+
+                <div id="posts" class="container-fluid" style="padding:100px 20px;">
+                    <h1 class="pt-5">Your Posts</h1>
+                    <a href="#" class="btn btn-success btn-sm float-start ms-5">Add New Post</a>
+                    <table class="table table-dark table-striped" style="display: inline;">
+                        <tr class="table-dark">
+                            <th class="col-1" scope="col">Title</th>
+                            <th class="col-1" scope="col">Thumbnail</th>
+                            <th class="col-1" scope="col">Description</th>
+                            <th class="col-1" scope="col">Action</th>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Test1</td>
+                            <td><img src="asset/thump-test.jpg" width="100" class="img-thumbnail bg-dark"></td>
+                            <td>fdasf fa fa fdfd ...</td>
+                            <td>
+                                <div class="btn-group-vertical">
+                                    <button type="button" class="btn btn-warning">Change</button>
+                                    <button type="button" class="btn btn-danger">Delelte</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Test2</td>
+                            <td><img src="asset/thump-test.jpg" width="100" class="img-thumbnail bg-dark"></td>
+                            <td>fdasf fa fa fdfd ...</td>
+                            <td>
+                                <div class="btn-group-vertical">
+                                    <button type="button" class="btn btn-warning">Change</button>
+                                    <button type="button" class="btn btn-danger">Delelte</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Test3</td>
+                            <td><img src="asset/thump-test.jpg" width="100" class="img-thumbnail bg-dark"></td>
+                            <td>fdasf fa fa fdfd ...</td>
+                            <td>
+                                <div class="btn-group-vertical">
+                                    <button type="button" class="btn btn-warning">Change</button>
+                                    <button type="button" class="btn btn-danger">Delelte</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <ul class="pagination justify-content-center ">
+                        <li class="page-item"><a class="page-link border-dark" href="#"><i class="fa-solid fa-backward"></i></a></li>
+
+                        <li class="page-item"><a class="page-link bg-success text-light border-dark" href="#">Add New Post</a></li>
+
+                        <li class="page-item"><a class="page-link border-dark" href="#"><i class="fa-solid fa-forward"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </main>
+    <div class="clearfix"></div>
+    <footer>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-light" href="http://pooyarezaee.ir/" target="_blank">Pooya RezaeeMoghadam</a>
+        </div>
+    </footer>
+
+    <script src="ScriptRegister.js"></script>
+</body>
+
+</html>
